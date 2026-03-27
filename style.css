@@ -1,4 +1,4 @@
-/* =====================================================
+﻿/* =====================================================
    VAL MAR — style.css (Enhanced)
    ===================================================== */
 
@@ -74,13 +74,13 @@ body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('hero/01.png') center center / 100% 100% no-repeat;
+    background: url('hero-01.png') center center / 100% 100% no-repeat;
     z-index: -1;
     transition: background-image 0.4s ease;
 }
 
 [data-theme="dark"] body::before {
-    background-image: url('hero/02.png');
+    background-image: url('hero-02.png');
 }
 
 /* Selection */
