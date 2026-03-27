@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fish Animation — VAL MAR</title>
+<style>
+    body {
+        margin: 0;
+        background-color: #0a2540;
+        overflow: hidden;
+    }
+    canvas {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<canvas id="ocean"></canvas>
+
+<script>
+const canvas = document.getElementById('ocean');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+/* ---- Vector Math ---- */
+class Vector {
+    constructor(x, y) { this.x = x; this.y = y; }
+    add(v)  { this.x += v.x; this.y += v.y; return this; }
+    sub(v)  { this.x -= v.x; this.y -= v.y; return this; }
+    mult(n) { this.x *= n;   this.y *= n;   return this; }
+    div(n)  { this.x /= n;   this.y /= n;   return this; }
+    mag() { return Math.sqrt(this.x * this.x + this.y * this.y); }
+    normalize() {
+        const m = this.mag();
+        if (m > 0) this.div(m);
+        return this;
+    }
+    limit(max) {
+        if (this.mag() > max) { this.normalize(); this.mult(max); }
+        return this;
+    }
+    static dist(v1, v2) {
+        return Math.sqrt((v1.x - v2.x) ** 2 + (v1.y - v2.y) ** 2);
+    }
+    static sub(v1, v2) { return new Vector(v1.x - v2.x, v1.y - v2.y); }
+}
+
+/* ---- Mouse / Touch ---- */
+const mouse = { pos: new Vector(-2000, -2000), active: false };
+
+window.addEventListener('mousemove', e => {
+    mouse.pos.x = e.clientX;
+    mouse.pos.y = e.clientY;
+    mouse.active = true;
+});
+window.addEventListener('touchstart', e => {
+    if (e.touches.length > 0) {
+        mouse.pos.x = e.touches[0].clientX;
+        mouse.pos.y = e.touches[0].clientY;
+        mouse.active = true;
+    }
+}, { passive: true });
+window.addEventListener('touchmove', e => {
+    if (e.touches.length > 0) {
+        mouse.pos.x = e.touches[0].clientX;
+        mouse.pos.y = e.touches[0].clientY;
+    }
+}, { passive: true });
+window.addEventListener('mouseout',  () => mouse.active = false);
+window.addEventListener('touchend',  () => mouse.active = false);
+
+/* ---- Fish Class ---- */
+class Fish {
+    constructor(x, y, color) {
+        this.pos = new Vector(x, y);
+        this.vel = new Vector(Math.random() * 2 - 1, Math.random() * 2 - 1);
+        this.acc = new Vector(0, 0);
+        this.maxSpeed = 1.5 + Math.random() * 2;
+        this.maxForce = 0.08;
+        this.color = color;
+        this.size = 14 + Math.random() * 10;
+        this.angle = Math.atan2(this.vel.y, this.vel.x);
+        this.tailWag = Math.random() * Math.PI * 2;
+        this.tailSpeed = 0.08 + Math.random() * 0.1;
+        this.wanderTheta = Math.random() * Math.PI * 2;
+    }
+
+    applyForce(force) { this.acc.add(force); }
+
+    behaviors(fishes) {
+        const flee       = this.flee(mouse.pos);
+        const wander     = this.wander();
+        const separation = this.separate(fishes);
+
+        flee.mult(2.5);
+        wander.mult(0.5);
+        separation.mult(1.5);
+
+        this.applyForce(flee);
+        this.applyForce(wander);
+        this.applyForce(separation);
+    }
+
+    flee(target) {
+        if (!mouse.active) return new Vector(0, 0);
+        const desired = Vector.sub(this.pos, target);
+        const d = desired.mag();
+        if (d < 160) {
+            desired.normalize().mult(this.maxSpeed * 1.6);
+            const steer = Vector.sub(desired, this.vel);
+            steer.limit(this.maxForce * 2);
+            return steer;
+        }
+        return new Vector(0, 0);
+    }
+
+    wander() {
+        const wanderR = 25, wanderD = 80, change = 0.3;
+        this.wanderTheta += (Math.random() * 2 - 1) * change;
+
+        const circlePos = new Vector(this.vel.x, this.vel.y);
+        circlePos.normalize().mult(wanderD).add(this.pos);
+
+        const h = Math.atan2(this.vel.y, this.vel.x);
+        const offset = new Vector(
+            wanderR * Math.cos(this.wanderTheta + h),
+            wanderR * Math.sin(this.wanderTheta + h)
+        );
+        const target = Vector.sub(circlePos.add(offset), this.pos);
+        target.normalize().mult(this.maxSpeed);
+        const steer = Vector.sub(target, this.vel);
+        steer.limit(this.maxForce);
+        return steer;
+    }
+
+    separate(fishes) {
+        const desiredSep = this.size * 2.5;
+        const steer = new Vector(0, 0);
+        let count = 0;
+        for (const other of fishes) {
+            const d = Vector.dist(this.pos, other.pos);
+            if (d > 0 && d < desiredSep) {
+                const diff = Vector.sub(this.pos, other.pos);
+                diff.normalize().div(d);
+                steer.add(diff);
+                count++;
+            }
+        }
+        if (count > 0) steer.div(count);
+        if (steer.mag() > 0) {
+            steer.normalize().mult(this.maxSpeed).sub(this.vel).limit(this.maxForce);
+        }
+        return steer;
+    }
+
+    update() {
+        this.vel.add(this.acc).limit(this.maxSpeed);
+        this.pos.add(this.vel);
+        this.acc.mult(0);
+
+        let diff = Math.atan2(this.vel.y, this.vel.x) - this.angle;
+        while (diff < -Math.PI) diff += Math.PI * 2;
+        while (diff >  Math.PI) diff -= Math.PI * 2;
+        this.angle += diff * 0.12;
+
+        const buffer = this.size * 2;
+        if (this.pos.x < -buffer)             this.pos.x = canvas.width + buffer;
+        if (this.pos.x > canvas.width + buffer)  this.pos.x = -buffer;
+        if (this.pos.y < -buffer)             this.pos.y = canvas.height + buffer;
+        if (this.pos.y > canvas.height + buffer) this.pos.y = -buffer;
+    }
+
+    draw() {
+        ctx.save();
+        ctx.translate(this.pos.x, this.pos.y);
+        ctx.rotate(this.angle);
+
+        this.tailWag += this.vel.mag() * this.tailSpeed;
+        const wag = Math.sin(this.tailWag) * 0.4;
+
+        // Tail
+        ctx.beginPath();
+        ctx.moveTo(-this.size * 0.8, 0);
+        ctx.quadraticCurveTo(-this.size * 1.5, -this.size * 0.8 + wag * 10, -this.size * 1.5, -this.size * 0.4);
+        ctx.lineTo(-this.size * 1.2, 0);
+        ctx.lineTo(-this.size * 1.5,  this.size * 0.4);
+        ctx.quadraticCurveTo(-this.size * 1.5,  this.size * 0.8 + wag * 10, -this.size * 0.8, 0);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+
+        // Dorsal fin
+        ctx.beginPath();
+        ctx.moveTo(-this.size * 0.2, -this.size * 0.3);
+        ctx.quadraticCurveTo(0, -this.size * 0.7, this.size * 0.4, -this.size * 0.2);
+        ctx.globalAlpha = 0.7;
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+
+        // Body
+        const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
+        grad.addColorStop(0, this.color);
+        grad.addColorStop(1, 'rgba(0,0,0,0.3)');
+        ctx.beginPath();
+        ctx.moveTo(this.size, 0);
+        ctx.bezierCurveTo( this.size * 0.8, -this.size * 0.6, -this.size * 0.5, -this.size * 0.5, -this.size * 0.9, 0);
+        ctx.bezierCurveTo(-this.size * 0.5,  this.size * 0.5,  this.size * 0.8,  this.size * 0.6,  this.size, 0);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        // Eye
+        ctx.beginPath();
+        ctx.arc(this.size * 0.7, -this.size * 0.15, this.size * 0.12, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(this.size * 0.75, -this.size * 0.15, this.size * 0.06, 0, Math.PI * 2);
+        ctx.fillStyle = '#111';
+        ctx.fill();
+
+        // Pectoral fin
+        ctx.beginPath();
+        ctx.ellipse(0, this.size * 0.2, this.size * 0.4, this.size * 0.15, wag * 0.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.25)';
+        ctx.fill();
+
+        ctx.restore();
+    }
+}
+
+/* ---- Bubbles (persistent objects, not random per-frame) ---- */
+class Bubble {
+    constructor() { this.reset(); }
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + Math.random() * 100;
+        this.r = 2 + Math.random() * 5;
+        this.speed = 0.4 + Math.random() * 0.6;
+        this.drift = (Math.random() - 0.5) * 0.4;
+        this.alpha = 0.1 + Math.random() * 0.2;
+    }
+    update() {
+        this.y -= this.speed;
+        this.x += this.drift;
+        if (this.y < -this.r * 2) this.reset();
+    }
+    draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.restore();
+    }
+}
+
+/* ---- Init ---- */
+const colors = ['#f1c40f','#e74c3c','#3498db','#2ecc71','#9b59b6','#e67e22','#1abc9c','#f39c12'];
+const fishArray  = Array.from({ length: 25 }, () =>
+    new Fish(Math.random() * canvas.width, Math.random() * canvas.height, colors[Math.floor(Math.random() * colors.length)])
+);
+const bubbles = Array.from({ length: 30 }, () => new Bubble());
+
+/* ---- Animation Loop ---- */
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    bubbles.forEach(b => { b.update(); b.draw(); });
+    fishArray.forEach(f => { f.behaviors(fishArray); f.update(); f.draw(); });
+
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
