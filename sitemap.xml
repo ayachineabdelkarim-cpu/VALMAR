@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ===== Page principale / الصفحة الرئيسية ===== -->
+  <url>
+    <loc>https://ayachineabdelkarim-cpu.github.io/VALMAR/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Hreflang alternates -->
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayachineabdelkarim-cpu.github.io/VALMAR/"/>
+
+    <!-- Sections (anchors) -->
+    <!-- #hero → #about → #raw-materials → #products → #process → #contact -->
+
+    <!-- Images for Google Image Search -->
+    <image:image>
+      <image:loc>https://ayachineabdelkarim-cpu.github.io/VALMAR/og-preview.png</image:loc>
+      <image:title>VAL MAR — Valorisation des Ressources Marines, Chlef Algérie</image:title>
+      <image:caption>Startup algérienne spécialisée dans la valorisation des déchets de poissons en huile Omega-3 et protéines marines.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayachineabdelkarim-cpu.github.io/VALMAR/hero-01.webp</image:loc>
+      <image:title>VAL MAR — Économie bleue et valorisation marine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayachineabdelkarim-cpu.github.io/VALMAR/logo.svg</image:loc>
+      <image:title>VAL MAR Logo</image:title>
+    </image:image>
+  </url>
+
+</urlset>

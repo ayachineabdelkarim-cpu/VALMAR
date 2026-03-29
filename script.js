@@ -21,13 +21,13 @@ const translations = {
         "products-title": "منتجاتنا الاستثنائية",
         "products-subtitle": "طيف واسع من الحلول المستخلصة بدقة لتلبية تطلعاتك بأعلى معايير النقاء.",
         "prod1-title": "زيوت أسماك طبيعية (أوميغا 3)",
-        "prod1-desc": "إكسير الحياة الطبيعي، مستخلص نقي لدعم المكملات الغذائية وصناعات التجميل الفاخرة.",
+        "prod1-desc": "إكسير الحياة الطبيعي، مستخلص نقي لدعم المكملات الغذائية وصناعات التجميل الفاخرة والعناية بالشعر والبشرة.",
         "prod2-title": "بروتين السمك / فرينة السمك",
         "prod2-desc": "طاقة خالصة ونمو مستدام.. مسحوق بروتين حيوي عالي الجودة لقطاع الأعلاف والثروة الحيوانية.",
         "prod5-title": "حلول صناعية صديقة للبيئة",
-        "prod5-desc": "مواد خام طبيعية مبتكرة وفعالة لدعم مختلف الصناعات البيئية والتحويلية.",
+        "prod5-desc": "مواد خام طبيعية مبتكرة لدعم الصناعات المختلفة، وحاويات بحرية مبردة صديقة للبيئة لضمان أقصى درجات الحفظ.",
         "process-title": "كيف نصنع الفارق؟",
-        "process-subtitle": "نأخذ من الطبيعة بحكمة، ونعيد لها التوازن من خلال خط إنتاج مبتكر يحترم البيئة.",
+        "process-subtitle": "نأخذ من الطبيعة بحكمة ونعيد إليها توازنها، من خلال خط إنتاج مبتكر يحترم البيئة ويحقق قيمة مضافة حقيقية.",
         "step1-title": "1. الانتقاء الدقيق",
         "step1-desc": "تأمين الموارد البحرية العضوية من مصادر مستدامة وموثوقة حصرياً.",
         "step2-title": "2. المعالجة المتقدمة",
@@ -39,10 +39,23 @@ const translations = {
         "contact-title": "دعنا نصنع المستقبل معاً",
         "contact-desc": "سواء كنت مستثمراً، أو شريكاً، أو عميلاً طموحاً.. فريقنا جاهز للتواصل والتطوير المشترك.",
         "contact-email-label": "البريد الإلكتروني",
-        "contact-phone-label": "الهاتف",
+        "contact-phone-label": "الهاتف / واتساب",
         "contact-location-label": "المقر",
         "contact-location": "الجزائر، الشلف",
-        "footer-text": "© 2026 VAL MAR. كل الحقوق محفوظة. نبتكر من أجل غد مستدام."
+        "contact-official-title": "قنوات التواصل الرسمية للمؤسسة",
+        "contact-founders-title": "تواصل مع المؤسسين",
+        "follow-us": "تابعنا على الشبكات الاجتماعية",
+        "founder1-role": "مهندس دولة – علوم البحر",
+        "founder2-role": "مهندسة دولة – علوم البحر",
+        "form-name": "الاسم الكامل",
+        "form-email": "البريد الإلكتروني",
+        "form-message": "رسالتك...",
+        "form-submit": "إرسال الرسالة",
+        "footer-text": "© 2026 VAL MAR. كل الحقوق محفوظة. نبتكر من أجل غد مستدام.",
+        "founder1-name": "عبد النور صلواتشي",
+        "founder1-desc": "مهندس دولة في علوم البحر ، لدي إهتمام خاص بالإبتكار وتثمين الموارد البحرية ، أعمل حاليا على تطوير حلول عملية ومستدامة لإستغلال المنتجات السمكية، ومن أبرز مشاريعي تحويل بقايا الأسماك النافقة أو المستهلكة التي تعتبر نفايات عضوية إلى منتجات ذات قيمة مضافة، تساهم في دعم الإقتصاد الأزرق و حماية البيئة، مع توفير حلول للمستثمرين المميزين ذوي النظرة الثاقبة .",
+        "founder2-name": "فاطمة الزهراء شويب",
+        "founder2-desc": "مهندسة دولة في علوم البحر، أهتم بريادة الأعمال البيئية وتطوير المشاريع المبتكرة في مجال الإستغلال المستدام للموارد البحرية ، كما أسعى للمساهمة في إيجاد حلول عملية تعزز التنمية المستدامة وتدعم المبادرات البيئية"
     },
     en: {
         "nav-about": "Who We Are",
@@ -61,11 +74,11 @@ const translations = {
         "products-title": "Our Exceptional Solutions",
         "products-subtitle": "A broad spectrum of meticulously extracted products to meet your highest expectations.",
         "prod1-title": "Natural Fish Oils (Omega-3)",
-        "prod1-desc": "Nature's elixir. A pure extract to empower premium dietary supplements and luxurious cosmetics.",
+        "prod1-desc": "Nature's elixir. A pure extract to support dietary supplements, luxury cosmetics, and hair and skin care.",
         "prod2-title": "Fish Protein / Fish Meal",
         "prod2-desc": "Pure energy and sustainable growth. High-quality vital protein powder for the premium feed sector.",
         "prod5-title": "Eco-Friendly Industrial Solutions",
-        "prod5-desc": "Innovative and effective natural raw materials supporting diverse environmental and manufacturing industries.",
+        "prod5-desc": "Innovative natural raw materials for diverse industries, featuring eco-friendly cooled marine containers to ensure maximum preservation.",
         "process-title": "How We Make an Impact",
         "process-subtitle": "We take from nature wisely, and restore its balance through an innovative, eco-respecting production line.",
         "step1-title": "1. Careful Selection",
@@ -79,10 +92,23 @@ const translations = {
         "contact-title": "Let's Shape the Future Together",
         "contact-desc": "Whether you are an investor, a partner, or an ambitious client... our team is ready to connect and co-create.",
         "contact-email-label": "Email",
-        "contact-phone-label": "Phone",
+        "contact-phone-label": "Phone / WhatsApp",
         "contact-location-label": "Location",
         "contact-location": "Algeria, Chlef",
-        "footer-text": "© 2026 VAL MAR. Innovating for a sustainable tomorrow."
+        "contact-official-title": "Official Company Channels",
+        "contact-founders-title": "Contact the Founders",
+        "follow-us": "Follow us on social media",
+        "founder1-role": "State Engineer – Marine Sciences",
+        "founder2-role": "State Engineer – Marine Sciences",
+        "form-name": "Full Name",
+        "form-email": "Email Address",
+        "form-message": "Your Message...",
+        "form-submit": "Send Message",
+        "footer-text": "© 2026 VAL MAR. Innovating for a sustainable tomorrow.",
+        "founder1-name": "Abdennour Salaouatchi",
+        "founder1-desc": "State Engineer in Marine Sciences, with a special interest in innovation and the valorization of marine resources. I am currently working on developing practical and sustainable solutions to exploit fish products. My main projects involve transforming dead or consumed fish remains into value-added products that support the blue economy and protect the environment.",
+        "founder2-name": "Fatima Zohra Chouieb",
+        "founder2-desc": "State Engineer in Marine Sciences, interested in environmental entrepreneurship and the development of innovative projects in the sustainable exploitation of marine resources. I also strive to contribute to finding practical solutions that promote sustainable development and support environmental initiatives."
     },
     fr: {
         "nav-about": "Qui Sommes-Nous",
@@ -101,11 +127,11 @@ const translations = {
         "products-title": "Nos Solutions Exceptionnelles",
         "products-subtitle": "Un large éventail de produits minutieusement extraits pour répondre à vos attentes les plus élevées.",
         "prod1-title": "Huiles de Poisson Naturelles (Oméga-3)",
-        "prod1-desc": "L'élixir de la nature. Un extrait pur pour enrichir les compléments alimentaires et les cosmétiques de luxe.",
+        "prod1-desc": "L'élixir de la nature. Un extrait pur pour soutenir les compléments alimentaires, les cosmétiques de luxe et les soins des cheveux et de la peau.",
         "prod2-title": "Protéine / Farine de Poisson",
         "prod2-desc": "Énergie pure et croissance durable. Poudre de protéines de haute qualité pour le secteur de l'alimentation animale.",
         "prod5-title": "Solutions Industrielles Écologiques",
-        "prod5-desc": "Matières premières naturelles innovantes pour soutenir diverses industries environnementales et manufacturières.",
+        "prod5-desc": "Matières premières naturelles innovantes pour diverses industries, avec des conteneurs marins réfrigérés écologiques pour garantir une conservation maximale.",
         "process-title": "Comment Nous Faisons la Différence",
         "process-subtitle": "Nous puisons dans la nature avec sagesse et restaurons son équilibre grâce à une ligne de production respectueuse de l'environnement.",
         "step1-title": "1. Sélection Soigneuse",
@@ -119,10 +145,23 @@ const translations = {
         "contact-title": "Façonnons l'Avenir Ensemble",
         "contact-desc": "Que vous soyez investisseur, partenaire ou client ambitieux... notre équipe est prête à collaborer.",
         "contact-email-label": "Email",
-        "contact-phone-label": "Téléphone",
+        "contact-phone-label": "Téléphone / WhatsApp",
         "contact-location-label": "Emplacement",
         "contact-location": "Algérie, Chlef",
-        "footer-text": "© 2026 VAL MAR. Innover pour un avenir durable."
+        "contact-official-title": "Canaux Officiels de l'Entreprise",
+        "contact-founders-title": "Contacter les Fondateurs",
+        "follow-us": "Suivez-nous sur les réseaux sociaux",
+        "founder1-role": "Ingénieur d'État – Sciences de la Mer",
+        "founder2-role": "Ingénieure d'État – Sciences de la Mer",
+        "form-name": "Nom Complet",
+        "form-email": "Adresse Email",
+        "form-message": "Votre Message...",
+        "form-submit": "Envoyer le Message",
+        "footer-text": "© 2026 VAL MAR. Innover pour un avenir durable.",
+        "founder1-name": "Abdennour Salaouatchi",
+        "founder1-desc": "Ingénieur d'État en Sciences de la Mer, passionné par l'innovation et la valorisation des ressources marines. Je travaille actuellement au développement de solutions pratiques et durables pour l'exploitation des produits de la pêche afin de soutenir l'économie bleue et la protection de l'environnement.",
+        "founder2-name": "Fatima Zohra Chouieb",
+        "founder2-desc": "Ingénieur d'État en Sciences de la Mer, intéressée par l'entrepreneuriat environnemental et le développement de projets innovants dans l'exploitation durable des ressources marines. Je m'efforce de contribuer à des solutions pratiques qui favorisent le développement durable et les initiatives environnementales."
     },
     es: {
         "nav-about": "Quiénes Somos",
@@ -131,8 +170,8 @@ const translations = {
         "nav-process": "Nuestro Impacto",
         "nav-contact": "Conéctate",
         "hero-title": "VAL MAR",
-        "hero-explanation": "Liderando la transición hacia una economía azul sostenible. En VAL MAR, innovamos soluciones industriales avanzadas, transformando residuos marinos en riqueza que apoya una economía circular de cero residuos.",
-        "hero-desc": "Desde el corazón del océano hacia su futuro... Fusionando naturaleza e innovación.",
+        "hero-explanation": "Liderando la transición hacia una economía azul sostenible. En VAL MAR, desarrollamos soluciones nutricionales e industriales avanzadas, transformando residuos orgánicos marinos en riqueza que apoya una economía circular de cero residuos.",
+        "hero-desc": "Desde el corazón del océano hacia tu futuro... Fundiendo naturaleza e innovación.",
         "cta-btn": "Descubra el Valor",
         "about-title": "Quiénes Somos",
         "about-desc": "En VAL MAR, no vemos los restos orgánicos como desechos, sino como un recurso inexplorado. Somos una startup ambiciosa que impulsa la innovación en la extracción de aceites y proteínas marinas naturales para un mundo global más limpio.",
@@ -141,11 +180,11 @@ const translations = {
         "products-title": "Soluciones Excepcionales",
         "products-subtitle": "Un amplio espectro de productos meticulosamente extraídos para superar sus expectativas.",
         "prod1-title": "Aceites de Pescado Naturales (Omega-3)",
-        "prod1-desc": "El elixir de la naturaleza, para potenciar suplementos dietéticos y cosmética premium.",
+        "prod1-desc": "El elixir de la naturaleza. Un extracto puro para apoyar suplementos dietéticos, cosméticos de lujo y el cuidado del cabello y la piel.",
         "prod2-title": "Proteína / Harina de Pescado",
         "prod2-desc": "Energía pura y crecimiento sostenible. Polvo de proteína vital de alta calidad.",
         "prod5-title": "Soluciones Industriales Ecológicas",
-        "prod5-desc": "Materias primas naturales innovadoras que apoyan diversas industrias ambientales.",
+        "prod5-desc": "Materias primas naturales e innovadoras para diversas industrias, con contenedores marinos refrigerados ecológicos para asegurar la máxima preservación.",
         "process-title": "Cómo Marcamos la Diferencia",
         "process-subtitle": "Tomamos de la naturaleza con sabiduría, restaurando su equilibrio mediante una producción innovadora y respetuosa.",
         "step1-title": "1. Selección Cuidadosa",
@@ -159,10 +198,23 @@ const translations = {
         "contact-title": "Formemos el Futuro Juntos",
         "contact-desc": "Ya sea un inversor, un socio o un cliente ambicioso... nuestro equipo está listo para colaborar y co-crear.",
         "contact-email-label": "Correo electrónico",
-        "contact-phone-label": "Teléfono",
+        "contact-phone-label": "Teléfono / WhatsApp",
         "contact-location-label": "Ubicación",
         "contact-location": "Argelia, Chlef",
-        "footer-text": "© 2026 VAL MAR. Innovando por un mañana sostenible."
+        "contact-official-title": "Canales Oficiales de la Empresa",
+        "contact-founders-title": "Contactar a los Fundadores",
+        "follow-us": "Síguenos en las redes sociales",
+        "founder1-role": "Ingeniero de Estado – Ciencias del Mar",
+        "founder2-role": "Ingeniera de Estado – Ciencias del Mar",
+        "form-name": "Nombre Completo",
+        "form-email": "Correo Electrónico",
+        "form-message": "Tu Mensaje...",
+        "form-submit": "Enviar Mensaje",
+        "footer-text": "© 2026 VAL MAR. Innovando por un mañana sostenible.",
+        "founder1-name": "Abdennour Salaouatchi",
+        "founder1-desc": "Ingeniero de Estado en Ciencias del Mar, con especial interés en la innovación y valorización de los recursos marinos. Actualmente desarrollo soluciones prácticas y sostenibles para la explotación de productos pesqueros que apoyan la economía azul y protegen el medio ambiente.",
+        "founder2-name": "Fatima Zohra Chouieb",
+        "founder2-desc": "Ingeniera de Estado en Ciencias del Mar, interesada en el emprendimiento ambiental y el desarrollo de proyectos innovadores en la explotación sostenible de los recursos marinos para promover el desarrollo sostenible."
     },
     ru: {
         "nav-about": "Кто мы",
@@ -181,13 +233,13 @@ const translations = {
         "products-title": "Наши исключительные решения",
         "products-subtitle": "Широкий спектр тщательно экстрагированных продуктов, превосходящих ваши ожидания.",
         "prod1-title": "Натуральный рыбий жир (Омега-3)",
-        "prod1-desc": "Эликсир природы. Чистый экстракт для создания премиальных пищевых добавок и люксовой косметики.",
+        "prod1-desc": "Эликсир природы. Чистый экстракт для поддержки биодобавок, элитной косметики, а также ухода за волосами и кожей.",
         "prod2-title": "Рыбный белок / Рыбная мука",
         "prod2-desc": "Чистая энергия и устойчивый рост. Высококачественный белковый порошок для элитных кормов.",
         "prod5-title": "Экологичные промышленные решения",
-        "prod5-desc": "Инновационное и эффективное натуральное сырье, поддерживающее экологические отрасли.",
-        "process-title": "Как мы делаем разницу",
-        "process-subtitle": "Мы мудро берем у природы и восстанавливаем её баланс с помощью инновационного производства.",
+        "prod5-desc": "Инновационное природное сырье для различных отраслей, включая экологичные охлаждаемые морские контейнеры для максимальной сохранности.",
+        "process-title": "Как мы создаём ценность?",
+        "process-subtitle": "Мы мудро берём у природы и восстанавливаем её баланс с помощью инновационной производственной линии, уважающей окружающую среду.",
         "step1-title": "1. Тщательный отбор",
         "step1-desc": "Получение морских биоресурсов исключительно из надежных и устойчивых источников.",
         "step2-title": "2. Передовая обработка",
@@ -199,10 +251,23 @@ const translations = {
         "contact-title": "Давайте формировать будущее вместе",
         "contact-desc": "Будь вы инвестором, партнером или амбициозным клиентом... наша команда готова к сотрудничеству.",
         "contact-email-label": "Эл. почта",
-        "contact-phone-label": "Телефон",
+        "contact-phone-label": "Телефон / WhatsApp",
         "contact-location-label": "Местоположение",
         "contact-location": "Алжир, Шлеф",
-        "footer-text": "© 2026 VAL MAR. Инновации для устойчивого будущего."
+        "contact-official-title": "Официальные каналы компании",
+        "contact-founders-title": "Связаться с основателями",
+        "follow-us": "Следите за нами в соцсетях",
+        "founder1-role": "Государственный инженер – Морские науки",
+        "founder2-role": "Государственный инженер – Морские науки",
+        "form-name": "Полное имя",
+        "form-email": "Электронная почта",
+        "form-message": "Ваше сообщение...",
+        "form-submit": "Отправить сообщение",
+        "footer-text": "© 2026 VAL MAR. Инновации для устойчивого будущего.",
+        "founder1-name": "Абденнур Салауатчи",
+        "founder1-desc": "Государственный инженер в области морских наук, с особым интересом к инновациям и валоризации морских ресурсов. В настоящее время разрабатываю практические и устойчивые решения по использованию рыбной продукции для поддержки синей экономики и защиты окружающей среды.",
+        "founder2-name": "Фатима Зохра Шуиб",
+        "founder2-desc": "Государственный инженер в области морских наук, интересуюсь экологическим предпринимательством и разработкой инновационных проектов в сфере устойчивого освоения морских ресурсов для содействия устойчивому развитию."
     }
 };
 
@@ -287,9 +352,6 @@ const themeHandler = () => {
    LANGUAGE HANDLER
    ===================================================== */
 const languageHandler = () => {
-    const langSelect       = document.getElementById('lang-select');
-    const langSelectMobile = document.getElementById('lang-select-mobile');
-
     const changeLanguage = (lang) => {
         const t = translations[lang];
         if (!t) return;
@@ -322,13 +384,41 @@ const languageHandler = () => {
         document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
         localStorage.setItem('lang', lang);
 
-        if (langSelect)       langSelect.value = lang;
-        if (langSelectMobile) langSelectMobile.value = lang;
+        const langBtn = document.getElementById('current-lang-btn');
+        const activeItem = document.querySelector(`.lang-dropdown li[data-lang="${lang}"]`);
+        if (activeItem && langBtn) {
+            const flagImg = activeItem.querySelector('img').cloneNode();
+            langBtn.innerHTML = '';
+            langBtn.appendChild(flagImg);
+            const abbr = lang === 'ar' ? 'عر' : lang.toUpperCase();
+            langBtn.appendChild(document.createTextNode(` ${abbr}`));
+        }
     };
 
-    const onLangChange = (e) => changeLanguage(e.target.value);
-    if (langSelect)       langSelect.addEventListener('change', onLangChange);
-    if (langSelectMobile) langSelectMobile.addEventListener('change', onLangChange);
+    // Custom Dropdown Logic
+    const langBtn = document.getElementById('current-lang-btn');
+    const langMenu = document.getElementById('lang-menu');
+    
+    if (langBtn && langMenu) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+                langMenu.classList.remove('show');
+            }
+        });
+        
+        langMenu.querySelectorAll('li').forEach(li => {
+            li.addEventListener('click', () => {
+                const selectedLang = li.getAttribute('data-lang');
+                changeLanguage(selectedLang);
+                langMenu.classList.remove('show');
+            });
+        });
+    }
 
     const savedLang = localStorage.getItem('lang') || 'ar';
     changeLanguage(savedLang);
@@ -418,6 +508,156 @@ const heroSlider = () => {
 };
 
 /* =====================================================
+   LIGHTBOX MODAL
+   ===================================================== */
+const lightboxHandler = () => {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-modal';
+    lightbox.innerHTML = `
+        <span class="lightbox-close" aria-label="إغلاق">&times;</span>
+        <div class="lightbox-img-wrapper">
+            <img class="lightbox-content" id="lightbox-img" draggable="false">
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const wrapper = document.querySelector('.lightbox-img-wrapper');
+    
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+
+    const updateTransform = () => {
+        lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    };
+
+    const resetZoom = () => {
+        scale = 1; translateX = 0; translateY = 0;
+        updateTransform();
+    };
+
+    const openLightbox = (src) => {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        resetZoom();
+    };
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
+
+    document.querySelectorAll('.profile-slide, .lightbox-trigger').forEach(slide => {
+        slide.style.cursor = 'zoom-in';
+        slide.addEventListener('click', function() { openLightbox(this.src); });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    wrapper.addEventListener('click', (e) => { if (e.target === wrapper) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    wrapper.addEventListener('wheel', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        e.preventDefault();
+        scale += e.deltaY * -0.0015;
+        if (scale > 5) scale = 5;
+        if (scale < 0.5) scale = 0.5;
+        updateTransform();
+    }, { passive: false });
+
+    lightboxImg.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        isDragging = true;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+        lightboxImg.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        updateTransform();
+    });
+
+    window.addEventListener('mouseup', () => { isDragging = false; lightboxImg.style.cursor = 'grab'; });
+
+    // Touch Support (for mobiles/tablets)
+    lightboxImg.addEventListener('touchstart', (e) => {
+        if(e.touches.length === 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX - translateX;
+            startY = e.touches[0].clientY - translateY;
+        }
+    });
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isDragging || e.touches.length !== 1) return;
+        translateX = e.touches[0].clientX - startX;
+        translateY = e.touches[0].clientY - startY;
+        updateTransform();
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => { isDragging = false; });
+};
+
+/* =====================================================
+   PRODUCT SLIDERS
+   ===================================================== */
+const productSliders = () => {
+    document.querySelectorAll('.product-slider').forEach(slider => {
+        const slides = slider.querySelectorAll('.product-img');
+        const prevBtn = slider.querySelector('.prod-nav.prev');
+        const nextBtn = slider.querySelector('.prod-nav.next');
+        let currentIndex = 0;
+        
+        if (slides.length <= 1) {
+            if(prevBtn) prevBtn.style.display = 'none';
+            if(nextBtn) nextBtn.style.display = 'none';
+            return;
+        }
+
+        const showSlide = (index) => {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        };
+
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        if (nextBtn) nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+            resetInterval();
+        });
+        
+        if (prevBtn) prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+            resetInterval();
+        });
+
+        // randomize start interval to offset animations naturally
+        let slideInterval = setInterval(nextSlide, 3500 + Math.random() * 1000);
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 3500);
+        };
+    });
+};
+
+/* =====================================================
    INIT
    ===================================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -427,4 +667,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollReveal();
     backToTop();
     heroSlider();
+    productSliders();
+    lightboxHandler();
 });
